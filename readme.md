@@ -109,6 +109,7 @@ use Siam\Sms\AliSms;
 use Siam\Sms\TencentSms;
 
 return [
+	'default' => 'ali',
 	'ali' => [
 		'key' => env('ALI_SMS_KEY'),
 		'secret' => env('ALI_SMS_SECRET'),
@@ -139,7 +140,7 @@ return [
 ];
 ```
 
-使用实例化时传入你使用的键名，默认的配置文件键名有 'ali' 和 'tencent' 当然你可以任意的按照自己想法进行更改键名或添加键名
+使用实例化时传入你使用的键名，如果不传入，则会取配置文件中的default值作为默认键名，默认的配置文件键名有 'ali' 和 'tencent' 当然你可以任意的按照自己想法进行更改键名或添加键名
 
 ```php
 use SiamSms;

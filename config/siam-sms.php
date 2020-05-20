@@ -4,6 +4,7 @@ use Siam\Sms\AliSms;
 use Siam\Sms\TencentSms;
 
 return [
+	'default' => '',
 	'ali' => [
 		'key' => env('ALI_SMS_KEY'),
 		'secret' => env('ALI_SMS_SECRET'),

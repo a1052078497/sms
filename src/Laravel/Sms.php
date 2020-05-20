@@ -27,8 +27,9 @@ class Sms
 	 * @param  string  $drive
 	 * @return void
 	 */
-	public function __construct($drive)
+	public function __construct($drive = null)
 	{
+		$drive = $drive ?? config('siam-sms.default');
 		$this->config = config('siam-sms.' . $drive);
 		$this->drive = new $this->config['drive']($this->config['key'], $this->config['secret']);
 	}
