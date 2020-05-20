@@ -1,0 +1,30 @@
+{
+    "name": "siam-yon/sms",
+    "description": "php实现的极简短信发送功能，基于阿里云、腾讯云最新短信发送api",
+    "keywords": ["qcloud sms", "aliyun sms", "php", "sms", "laravel sms", "thinkphp sms", "composer sms"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Siam",
+            "email": "1052078497@qq.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Siam\\Sms\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Siam\\Sms\\Laravel\\ServiceProvider"
+            ],
+            "aliases": {
+                "SiamSms": "Siam\\Sms\\Laravel\\Sms"
+            }
+        }
+    }
+}
